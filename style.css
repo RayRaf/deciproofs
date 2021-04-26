@@ -3,6 +3,10 @@ html, body {
     height: 297mm;
     margin: 0;
     padding: 0;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     margin:auto;
 }
+#the-canvas {
+    border: 1px solid black;
+    direction: ltr;
+  }
