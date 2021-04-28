@@ -6,7 +6,7 @@ var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compres
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
 // The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'mozilla.github.io/pdf.js/build/pdf.worker.js';
 
 var pdfDoc = null,
     pageNum = 1,
