@@ -4,19 +4,20 @@
     <title>test</title>
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
 </head>
 <body>
-	<canvas id="my_canvas"></canvas>
-	
-	<script>
-		var docum = pdfjsLib.getDocument('formlab_tz_lasercutter.pdf');
-		// doc.getPage(1)
-	</script>
-	
+	<script src="scr.js"></script>
 
+<h1>PDF.js Previous/Next example</h1>
 
-	<!-- <script src="scr.js"></script> -->
+<div>
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+  &nbsp; &nbsp;
+  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+</div>
+
+<canvas id="the-canvas"></canvas>
 </body>
 </html>
 
