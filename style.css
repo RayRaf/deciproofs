@@ -1,4 +1,12 @@
 #the-canvas {
-    border: 1px solid black;
-    direction: ltr;
-  }
+  border: 1px solid black;
+  direction: ltr;
+}
+
+.testdiv {
+  position: absolute;
+  left: 32mm;
+  top: 52mm;
+  width: 100mm;
+  height: 100mm;
+}
