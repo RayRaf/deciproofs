@@ -71,4 +71,13 @@ loadingTask.promise.then(function (pdf) {
 
 
 
+        var canvas = document.getElementById('the-canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.onmousemove = function(event) {
+            var x = event.offsetX;
+            var y = event.offsetY;
+            ctx.fillRect(x,y, 10,10);
+        }
+
+
 
