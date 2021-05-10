@@ -27,6 +27,11 @@ loadingTask.promise.then(function (pdf) {
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
+
+        
+
+
+
         // Render PDF page into canvas context
         var renderContext = {
             canvasContext: context,
@@ -35,8 +40,28 @@ loadingTask.promise.then(function (pdf) {
         var renderTask = page.render(renderContext);
         renderTask.promise.then(function () {
             console.log('Page rendered');
+
+            //Нарисуем залитый прямоугольник
+            context.fillStyle ='red';
+            context.fillRect(300, 200, 150, 75);
+            //context.fillRect(x, y, width, height) - назначение параметров           
+            //context.clearRect(0,0,400,200); - метод очищает canvas
+            
+            context.strokeStyle = "green";
+            context.lineWidth = "5";
+            context.rect(50, 400, 750, 75);
+            context.stroke();
+            //context.fill(); заливает прямоугольник
+
+
         });
     });
+
+
+
+    
+
+
 }, function (reason) {
     // PDF loading error
     console.error(reason);
