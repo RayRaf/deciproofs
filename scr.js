@@ -70,14 +70,50 @@ loadingTask.promise.then(function (pdf) {
 
 
 
-
+        //Выполняется рисование по положению мыши
         var canvas = document.getElementById('the-canvas');
         var ctx = canvas.getContext('2d');
-        canvas.onmousemove = function(event) {
-            var x = event.offsetX;
-            var y = event.offsetY;
-            ctx.fillRect(x,y, 10,10);
+        var myColor = 'red';
+        var editMode = false;
+        document.getElementById("in1").oninput = function() {
+            myColor = this.value;
         }
+
+        document.getElementById("in2").onclick = function() {
+
+            editMode = (editMode == true) ? false : true;
+            this.value = (editMode == true) ? 'STOP EDITING' : 'START EDITING';
+        }
+
+        
+            canvas.onmousedown = function (event) {
+
+                if(editMode==true){
+                    canvas.onmousemove = function(event) {
+                        var x = event.offsetX;
+                        var y = event.offsetY;
+                        ctx.fillStyle = myColor;
+                        ctx.fillRect(x,y, 10,10);
+                        ctx.fill();
+                    }
+        
+                    canvas.onmouseup = function(event){
+                        canvas.onmousemove = null;
+                    }
+                }
+
+
+                
+    
+            }
+        
+
+        
+
+
+
+
+       
 
 
 
