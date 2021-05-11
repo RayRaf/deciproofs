@@ -1,0 +1,14 @@
+#the-canvas {
+  width: 800;
+  height: 800;
+  border: 1px solid black;
+  direction: ltr;
+}
+
+
+#wrapper{
+  text-align:center;
+}
+
+
+
